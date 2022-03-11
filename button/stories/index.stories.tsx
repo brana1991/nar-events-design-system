@@ -1,25 +1,19 @@
-import {
-  ArrowForwardIcon,
-  ChevronDownIcon,
-  EmailIcon,
-  PhoneIcon,
-  SearchIcon,
-} from '../src/index';
-import { HStack, Stack } from '../src/index';
-import * as React from 'react';
-import { FaFacebook, FaTwitter } from 'react-icons/fa';
-import { MdBuild, MdCall } from 'react-icons/md';
-import { Spinner } from '~/spinner';
-import { Button } from '../src/index';
-import { ButtonGroup, IconButton } from '../src/index';
+import { ArrowForwardIcon, ChevronDownIcon, EmailIcon, PhoneIcon, SearchIcon } from "../src/index";
+import { HStack, Stack } from "../src/index";
+import * as React from "react";
+import { FaFacebook, FaTwitter } from "react-icons/fa";
+import { MdBuild, MdCall } from "react-icons/md";
+import { Spinner } from "~/spinner";
+import { Button } from "../src/index";
+import { ButtonGroup, IconButton } from "../src/index";
 
-import { themeDecorator } from '../../story-layout/src/index';
+import { themeDecorator } from "../../story-layout/src/index";
 
 export default {
-  title: 'Button',
+  title: "Button",
   decorators: [themeDecorator],
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
 };
 
@@ -40,7 +34,7 @@ export const basic = () => (
 
 export const outlines = () => (
   <>
-    <Button variant="outline" colorScheme="red">
+    <Button variant="primary" colorScheme="red">
       Button
     </Button>
     <Button variant="outline" colorScheme="green">
@@ -109,11 +103,7 @@ export const WithIcon = () => (
     <Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
       Email
     </Button>
-    <Button
-      rightIcon={<ArrowForwardIcon />}
-      colorScheme="teal"
-      variant="outline"
-    >
+    <Button rightIcon={<ArrowForwardIcon />} colorScheme="teal" variant="outline">
       Call us
     </Button>
   </Stack>
@@ -136,20 +126,11 @@ export const WithLoading = () => (
       Email
     </Button>
 
-    <Button
-      isLoading
-      colorScheme="blue"
-      spinner={<Spinner size={8} color="white" />}
-    >
+    <Button isLoading colorScheme="blue" spinner={<Spinner size={8} color="white" />}>
       Click me
     </Button>
 
-    <Button
-      isLoading
-      loadingText="Submitting..."
-      colorScheme="teal"
-      variant="outline"
-    >
+    <Button isLoading loadingText="Submitting..." colorScheme="teal" variant="outline">
       Submit
     </Button>
   </Stack>
@@ -196,13 +177,7 @@ export const withDisabled = () => (
 );
 
 export const customComposition = () => (
-  <Button
-    size="md"
-    height="48px"
-    width="200px"
-    border="2px solid"
-    borderColor="green.500"
-  >
+  <Button size="md" height="48px" width="200px" border="2px solid" borderColor="green.500">
     Button
   </Button>
 );
@@ -211,11 +186,7 @@ export const iconButton = () => (
   <Stack direction="row">
     <IconButton aria-label="Search database" icon={<SearchIcon />} />
 
-    <IconButton
-      colorScheme="blue"
-      aria-label="Search database"
-      icon={<SearchIcon />}
-    />
+    <IconButton colorScheme="blue" aria-label="Search database" icon={<SearchIcon />} />
 
     <IconButton colorScheme="teal" aria-label="Call Segun" size="lg">
       <PhoneIcon />
@@ -233,11 +204,7 @@ export const WithButtonGroup = () => (
 export const attachedButtons = () => (
   <ButtonGroup size="sm" isAttached variant="outline">
     <Button marginEnd="-px">Save</Button>
-    <IconButton
-      fontSize="2xl"
-      aria-label="Add to friends"
-      icon={<ChevronDownIcon />}
-    />
+    <IconButton fontSize="2xl" aria-label="Add to friends" icon={<ChevronDownIcon />} />
   </ButtonGroup>
 );
 

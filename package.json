@@ -3,7 +3,6 @@
   "version": "0.0.2",
   "description": "A chakra-ui based design system as a starter kit for Backlight",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "serve": "npx backlight@latest serve EYlCxnP9jVnae2hpnQXD --open"
   },
