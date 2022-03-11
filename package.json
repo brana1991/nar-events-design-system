@@ -6,6 +6,7 @@
   "scripts": {
     "serve": "npx backlight@latest serve EYlCxnP9jVnae2hpnQXD --open"
   },
+  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@divriots/dockit-react": "^0.0.84",
